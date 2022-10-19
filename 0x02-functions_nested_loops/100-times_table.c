@@ -5,15 +5,10 @@
  *
  * Return: Always 0.
  */
-int main(void)
+void print_times_table(int n)
 {
-	print_times_table(3);
-	 _putchar('\n');
-	 print_times_table(5);
-	 _putchar('\n');
-	  print_times_table(98);
-	  _putchar('\n');
-	  print_times_table(12);  
-
-	  return (0);
+	
+	if (n > 15 || < 0)
+		printf("Nothing\n");
+       	return (0);
 }
