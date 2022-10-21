@@ -19,4 +19,6 @@ void print_number(int n)
 		print_number(d / 10);
 	}
 	_putchar((d % 10) + '0');
+	_putchar('\n');
+	return (0);
 }
