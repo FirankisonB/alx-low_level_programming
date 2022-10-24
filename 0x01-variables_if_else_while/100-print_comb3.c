@@ -3,31 +3,26 @@
 /**
  * main - prints all possible combinations of two different numbers
  *
- * Return: Always 0 (success)
- *
+ * Description: Prints combinations of decimal digits using only putchar
+ * Return: Always 0
  */
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
+	int i, j;
 
-	for (tens = '0'; tens <= '9'; tens++)/* prints tens digit*/
+	for (i = 48; i <= 57; i++)
 	{
-		for (ones = '0'; ones <= '9'; ones++)/* prints ones digit*/
+		for (j = i + 1; j <= 57; j++)
 		{
-			if (!((ones == tens) || (tens > ones))/* eliminates repition*/
+			putchar(i);
+			putchar(j);
+			if (!(i == 56 && j == 57))
 			{
-			putchar(tens);
-			putchar(ones);
-				if (!(ones == '9' && tens == '8'))/*adds comma and space*/
-				{
 				putchar(',');
 				putchar(' ');
-				}
 			}
 		}
 	}
 	putchar('\n');
-
 	return (0);
 }
